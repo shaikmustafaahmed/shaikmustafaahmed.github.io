@@ -1,723 +1,606 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Mustafa Ahmed | IT Support Portfolio</title>
-
-    <meta
-        name="description"
-        content="Mustafa Ahmed - BCA Graduate focused on IT Support, Technical Support and IT Operations."
-    >
-
-    <style>
-        /* =========================================================
-           RESET
-        ========================================================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 85px;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #ffffff;
-            color: #334155;
-            line-height: 1.7;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        button,
-        input,
-        textarea {
-            font-family: inherit;
-        }
-
-        .container {
-            width: min(1120px, 92%);
-            margin: auto;
-        }
-
-        /* =========================================================
-           VARIABLES
-        ========================================================= */
-
-        :root {
-            --blue: #2563eb;
-            --blue-dark: #1d4ed8;
-            --blue-light: #eff6ff;
-            --dark: #0f172a;
-            --text: #334155;
-            --muted: #64748b;
-            --light: #f8fafc;
-            --card: #f1f5f9;
-            --border: #dbe4ef;
-            --white: #ffffff;
-        }
-
-        /* =========================================================
-           NAVBAR
-        ========================================================= */
-
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 9999;
-            background: rgba(255,255,255,0.96);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .nav-container {
-            width: min(1160px, 94%);
-            min-height: 72px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .logo {
-            font-size: 23px;
-            font-weight: 800;
-            color: var(--dark);
-            white-space: nowrap;
-        }
-
-        .logo span {
-            color: var(--blue);
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 22px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--text);
-            transition: 0.25s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--blue);
-        }
-
-        /* =========================================================
-           FLOATING CONTACT BUTTON
-        ========================================================= */
-
-        .floating-contact {
-            position: fixed;
-            right: 22px;
-            top: 110px;
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            background: var(--blue);
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            z-index: 9998;
-            box-shadow: 0 15px 35px rgba(37,99,235,0.30);
-            animation: floatButton 2.8s ease-in-out infinite;
-        }
-
-        @keyframes floatButton {
-            0%, 100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-8px);
-            }
-        }
-
-        /* =========================================================
-           HERO
-        ========================================================= */
-
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            background:
-                radial-gradient(circle at 90% 10%, #eff6ff 0, transparent 35%),
-                linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-            overflow: hidden;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.25fr 0.75fr;
-            gap: 55px;
-            align-items: center;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: var(--blue-light);
-            color: var(--blue-dark);
-            padding: 8px 15px;
-            border-radius: 999px;
-            font-size: 13px;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: clamp(42px, 7vw, 72px);
-            line-height: 1.05;
-            color: var(--dark);
-            margin-bottom: 14px;
-        }
-
-        .hero h1 span {
-            color: var(--blue);
-        }
-
-        .university {
-            font-size: clamp(20px, 3vw, 28px);
-            font-weight: 800;
-            color: var(--text);
-            margin-bottom: 12px;
-        }
-
-        .typing-wrapper {
-            min-height: 58px;
-            display: flex;
-            align-items: center;
-            margin-bottom: 18px;
-        }
-
-        .typing-text {
-            font-size: clamp(21px, 3vw, 31px);
-            font-weight: 800;
-            color: var(--blue);
-        }
-
-        .cursor {
-            width: 3px;
-            height: 32px;
-            background: var(--blue);
-            margin-left: 7px;
-            animation: blinkCursor 0.75s infinite;
-        }
-
-        @keyframes blinkCursor {
-            0%, 45% {
-                opacity: 1;
-            }
-
-            46%, 100% {
-                opacity: 0;
-            }
-        }
-
-        .hero-description {
-            max-width: 720px;
-            color: var(--muted);
-            font-size: 17px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 28px;
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 13px 20px;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 800;
-            transition: 0.25s ease;
-        }
-
-        .button-primary {
-            background: var(--blue);
-            color: white;
-        }
-
-        .button-primary:hover {
-            background: var(--blue-dark);
-            transform: translateY(-3px);
-        }
-
-        .button-outline {
-            background: white;
-            border: 1px solid var(--border);
-            color: var(--dark);
-        }
-
-        .button-outline:hover {
-            border-color: #93c5fd;
-            color: var(--blue);
-            transform: translateY(-3px);
-        }
-
-        .hero-card {
-            background: #ffffff;
-            border: 1px solid var(--border);
-            border-radius: 28px;
-            padding: 34px;
-            text-align: center;
-            box-shadow: 0 20px 50px rgba(15,23,42,0.08);
-        }
-
-        .hero-avatar {
-            width: 180px;
-            height: 180px;
-            margin: auto;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #dbeafe, #eff6ff);
-            border: 6px solid white;
-            box-shadow: 0 20px 40px rgba(37,99,235,0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 78px;
-        }
-
-        .hero-card h3 {
-            margin-top: 20px;
-            color: var(--dark);
-            font-size: 24px;
-        }
-
-        .hero-card p {
-            margin-top: 7px;
-            color: var(--muted);
-        }
-
-        /* =========================================================
-           GENERAL SECTIONS
-        ========================================================= */
-
-        section {
-            padding: 90px 0;
-        }
-
-        .section-heading {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-icon {
-            display: block;
-            font-size: 31px;
-            margin-bottom: 7px;
-        }
-
-        .section-heading h2 {
-            display: inline-block;
-            color: var(--blue);
-            font-size: 36px;
-        }
-
-        .section-heading h2::after {
-            content: "";
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--blue);
-            border-radius: 10px;
-            margin: 9px auto 0;
-        }
-
-        .section-heading p {
-            max-width: 760px;
-            margin: 14px auto 0;
-            color: var(--muted);
-        }
-
-        /* =========================================================
-           ABOUT
-        ========================================================= */
-
-        .about-box {
-            max-width: 930px;
-            margin: auto;
-            padding: 36px;
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 22px;
-            box-shadow: 0 15px 40px rgba(15,23,42,0.06);
-        }
-
-        .about-box p {
-            margin-bottom: 15px;
-        }
-
-        .about-box p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* =========================================================
-           EDUCATION TIMELINE
-        ========================================================= */
-
-        .timeline {
-            max-width: 900px;
-            margin: auto;
-            position: relative;
-        }
-
-        .timeline::before {
-            content: "";
-            position: absolute;
-            left: 22px;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: #bfdbfe;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 68px;
-            margin-bottom: 30px;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: 7px;
-            top: 8px;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: var(--blue);
-            border: 5px solid white;
-            box-shadow: 0 0 0 2px #bfdbfe;
-        }
-
-        .timeline-card {
-            padding: 27px;
-            border-radius: 18px;
-            background: var(--card);
-            border: 1px solid var(--border);
-            box-shadow: 0 12px 30px rgba(15,23,42,0.05);
-        }
-
-        .timeline-date {
-            color: var(--blue-dark);
-            font-weight: 800;
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-
-        .timeline-card h3 {
-            color: var(--dark);
-            margin-bottom: 7px;
-        }
-
-        /* =========================================================
-           HOBBIES
-        ========================================================= */
-
-        .hobby-grid {
-            max-width: 950px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 16px;
-        }
-
-        .hobby-card {
-            padding: 24px 15px;
-            text-align: center;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            box-shadow: 0 12px 28px rgba(15,23,42,0.05);
-            transition: 0.3s ease;
-        }
-
-        .hobby-card:hover {
-            transform: translateY(-8px);
-            border-color: #93c5fd;
-        }
-
-        .hobby-icon {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
-
-        .hobby-card h3 {
-            font-size: 15px;
-            color: var(--dark);
-        }
-
-        /* =========================================================
-           3D CUBE SECTION
-        ========================================================= */
-
-        .cube-section {
-            background: var(--light);
-        }
-
-        .cube-stage {
-            width: 100%;
-            min-height: 560px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            perspective: 1100px;
-            overflow: visible;
-        }
-
-        .cube {
-            width: 280px;
-            height: 280px;
-            position: relative;
-            transform-style: preserve-3d;
-            -webkit-transform-style: preserve-3d;
-            animation: cubeRotate 14s linear infinite;
-        }
-
-        .cube:hover {
-            animation-play-state: paused;
-        }
-
-        .cube-face {
-            position: absolute;
-            width: 280px;
-            height: 280px;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-
-            padding: 30px;
-
-            border-radius: 20px;
-            border: 2px solid #bfdbfe;
-
-            background:
-                linear-gradient(145deg, #ffffff 0%, #eff6ff 100%);
-
-            box-shadow:
-                0 20px 40px rgba(15,23,42,0.13),
-                inset 0 0 30px rgba(37,99,235,0.05);
-
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
-        }
-
-        .cube-face .cube-icon {
-            font-size: 64px;
-            margin-bottom: 15px;
-        }
-
-        .cube-face h3 {
-            color: var(--dark);
-            font-size: 22px;
-            margin-bottom: 8px;
-        }
-
-        .cube-face p {
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-        .cube-front {
-            transform: rotateY(0deg) translateZ(140px);
-        }
-
-        .cube-right {
-            transform: rotateY(90deg) translateZ(140px);
-        }
-
-        .cube-back {
-            transform: rotateY(180deg) translateZ(140px);
-        }
-
-        .cube-left {
-            transform: rotateY(-90deg) translateZ(140px);
-        }
-
-        .cube-top {
-            transform: rotateX(90deg) translateZ(140px);
-        }
-
-        .cube-bottom {
-            transform: rotateX(-90deg) translateZ(140px);
-        }
-
-        @keyframes cubeRotate {
-            0% {
-                transform: rotateX(-8deg) rotateY(0deg);
-            }
-
-            25% {
-                transform: rotateX(8deg) rotateY(90deg);
-            }
-
-            50% {
-                transform: rotateX(-8deg) rotateY(180deg);
-            }
-
-            75% {
-                transform: rotateX(8deg) rotateY(270deg);
-            }
-
-            100% {
-                transform: rotateX(-8deg) rotateY(360deg);
-            }
-        }
-
-        .cube-label {
-            text-align: center;
-            margin-top: -20px;
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        /* =========================================================
-           SKILL BARS
-        ========================================================= */
-
-        .skill-note {
-            max-width: 780px;
-            margin: -15px auto 38px;
-            text-align: center;
-            color: var(--muted);
-        }
-
-        .skill-grid {
-            max-width: 920px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .skill-card {
-            padding: 22px;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 17px;
-            box-shadow: 0 10px 28px rgba(15,23,42,0.05);
-        }
-
-        .skill-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 11px;
-            gap: 12px;
-        }
-
-        .skill-name {
-            color: var(--dark);
-            font-weight: 800;
-        }
-
-        .skill-percent {
-            color: var(--blue);
-            font-weight: 800;
-        }
-
-        .bar {
-            width: 100%;
-            height: 11px;
-            background: #e2e8f0;
-            border-radius: 999px;
-            overflow: hidden;
-        }
-
-        .bar-fill {
-            width: 0;
-            height: 100%;
-            border-radius: inherit;
-            background: linear-gradient(
-                90deg,
-                #2563eb,
-                #60a5fa
-            );
-            transition: width 1.8s cubic-bezier(.16,1,.3,1);
-        }
-
-        /* =========================================================
-           PROJECTS
-        ========================================================= */
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .project-card {
-            padding: 32px;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 21px;
-            box-shadow: 0 14px 32px rgba(15,23,42,0.06);
-            transition: 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-7px);
-            border-color: #93c5fd;
-        }
-
-        .project-icon {
-            font-size: 48px;
-            margin-bottom: 13px;
-        }
-
-        .project-card h3 {
-            color: var(--dark);
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            color: var(--muted);
-            margin-bottom: 18px;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-
-        .tag {
-            background: #eef2ff;
-            color: #475569;
-            padding: 6px 11
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mustafa Ahmed | IT Support Portfolio</title>
+
+<meta name="description" content="Mustafa Ahmed - BCA Graduate focused on IT Support, Technical Support and IT Operations.">
+
+<style>
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #334155;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: auto;
+}
+
+section {
+    padding: 85px 0;
+}
+
+
+/* =========================
+   COLORS
+========================= */
+
+:root {
+    --blue: #2563eb;
+    --blue-dark: #1d4ed8;
+    --blue-light: #eff6ff;
+    --dark: #0f172a;
+    --text: #334155;
+    --muted: #64748b;
+    --light: #f8fafc;
+    --card: #f1f5f9;
+    --border: #dbe4ef;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+
+/* =========================
+   FLOATING BUTTON
+========================= */
+
+.float-btn {
+    position: fixed;
+    top: 105px;
+    right: 20px;
+    z-index: 999;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+    box-shadow: 0 12px 30px rgba(37,99,235,0.30);
+    animation: floatButton 3s ease-in-out infinite;
+}
+
+@keyframes floatButton {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 90% 10%, #eff6ff 0, transparent 35%),
+        linear-gradient(180deg, #ffffff, #f8fafc);
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.university {
+    font-size: clamp(20px, 3vw, 29px);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.typing {
+    min-height: 55px;
+    color: var(--blue);
+    font-size: clamp(21px, 3vw, 31px);
+    font-weight: 800;
+}
+
+.hero-desc {
+    max-width: 700px;
+    color: var(--muted);
+    font-size: 17px;
+    margin-top: 8px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 800;
+    transition: 0.25s ease;
+}
+
+.btn-primary {
+    background: var(--blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--blue-dark);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: white;
+    color: var(--dark);
+    border: 1px solid var(--border);
+}
+
+.btn-outline:hover {
+    color: var(--blue);
+    transform: translateY(-3px);
+}
+
+.profile {
+    padding: 32px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(15,23,42,0.08);
+}
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    margin: auto;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    font-size: 74px;
+}
+
+.profile h3 {
+    color: var(--dark);
+    font-size: 24px;
+    margin-top: 18px;
+}
+
+.profile p {
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.heading .icon {
+    display: block;
+    font-size: 31px;
+}
+
+.heading h2 {
+    display: inline-block;
+    color: var(--blue);
+    font-size: 35px;
+}
+
+.heading h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--blue);
+    margin: 8px auto 0;
+    border-radius: 10px;
+}
+
+.heading p {
+    max-width: 750px;
+    margin: 12px auto 0;
+    color: var(--muted);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-box {
+    max-width: 900px;
+    margin: auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 34px;
+    box-shadow: 0 12px 35px rgba(15,23,42,0.06);
+}
+
+.about-box p {
+    margin-bottom: 14px;
+}
+
+.about-box p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.timeline {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #bfdbfe;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 68px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background: var(--blue);
+    border: 5px solid white;
+    box-shadow: 0 0 0 2px #bfdbfe;
+}
+
+.timeline-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 26px;
+}
+
+.timeline-date {
+    color: var(--blue-dark);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.timeline-card h3 {
+    color: var(--dark);
+    margin: 5px 0;
+}
+
+
+/* =========================
+   HOBBIES
+========================= */
+
+.hobbies {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.hobby {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    padding: 24px 12px;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(15,23,42,0.05);
+    transition: 0.3s ease;
+}
+
+.hobby:hover {
+    transform: translateY(-7px);
+    border-color: #93c5fd;
+}
+
+.hobby .emoji {
+    font-size: 38px;
+}
+
+.hobby h3 {
+    font-size: 15px;
+    color: var(--dark);
+    margin-top: 8px;
+}
+
+
+/* =========================
+   3D SKILL CUBE
+========================= */
+
+.cube-section {
+    background: var(--light);
+}
+
+.cube-stage {
+    min-height: 520px;
+    display: grid;
+    place-items: center;
+    perspective: 1100px;
+    overflow: visible;
+}
+
+.cube {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    animation: skillCube 12s linear infinite;
+}
+
+.cube-face {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 24px;
+
+    border: 2px solid #bfdbfe;
+    border-radius: 18px;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #eff6ff
+    );
+
+    box-shadow:
+        0 18px 40px rgba(15,23,42,0.12),
+        inset 0 0 30px rgba(37,99,235,0.04);
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.cube-face .cube-icon {
+    font-size: 58px;
+}
+
+.cube-face h3 {
+    color: var(--dark);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.cube-face p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.cube-front {
+    transform: rotateY(0deg) translateZ(130px);
+}
+
+.cube-right {
+    transform: rotateY(90deg) translateZ(130px);
+}
+
+.cube-back {
+    transform: rotateY(180deg) translateZ(130px);
+}
+
+.cube-left {
+    transform: rotateY(-90deg) translateZ(130px);
+}
+
+.cube-top {
+    transform: rotateX(90deg) translateZ(130px);
+}
+
+.cube-bottom {
+    transform: rotateX(-90deg) translateZ(130px);
+}
+
+@keyframes skillCube {
+    0% {
+        transform: rotateX(-8deg) rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateX(8deg) rotateY(90deg);
+    }
+
+    50% {
+        transform: rotateX(-8deg) rotateY(180deg);
+    }
+
+    75% {
+        transform: rotateX(8deg) rotateY(270deg);
+    }
+
+    100% {
+        transform: rotateX(-8deg) rotateY(360deg);
+    }
+}
+
+.cube-note {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: -20px;
+}
+
+
+/* =========================
+   SKILL BARS
+========================= */
+
+.skills {
+    max-width: 920px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.skill {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 21px;
+    box-shadow: 0 10px 28px rgba(15,23,42,0.05);
+}
+
+.skill-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 9px;
+    font-weight: 800;
+}
+
+.skill-head span:first-child {
+    color: var(--dark);
+}
+
+.skill-head span:last-child {
+    color: var(--blue);
+}
+
+.track {
+    height: 10px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0;
+    height: 
