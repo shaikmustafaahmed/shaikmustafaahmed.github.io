@@ -3,846 +3,1110 @@
 
 <head>
 
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Mustafa Ahmed | IT Support Portfolio</title>
-
-    <meta
-        name="description"
-        content="Mustafa Ahmed - BCA Graduate | IT Support | Technical Support | IT Operations"
-    >
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #ffffff;
-            color: #334155;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        nav {
-            background: #ffffff;
-            border-bottom: 1px solid #e2e8f0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            min-height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .logo {
-            color: #0f172a;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .logo span {
-            color: #2563eb;
-        }
-
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #334155;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .nav-links a:hover {
-            color: #2563eb;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            padding: 100px 0;
-            background: #f8fafc;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .hero-label {
-            display: inline-block;
-            background: #eff6ff;
-            color: #1d4ed8;
-            padding: 7px 14px;
-            border-radius: 30px;
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 18px;
-        }
-
-        .hero h1 {
-            color: #0f172a;
-            font-size: 58px;
-            line-height: 1.1;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 span {
-            color: #2563eb;
-        }
-
-        .hero-subtitle {
-            font-size: 24px;
-            color: #334155;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .hero-text {
-            color: #64748b;
-            font-size: 17px;
-            max-width: 700px;
-            margin-bottom: 12px;
-        }
-
-        .hero-buttons {
-            margin-top: 25px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 20px;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .button-primary {
-            background: #2563eb;
-            color: #ffffff;
-        }
-
-        .button-primary:hover {
-            background: #1d4ed8;
-        }
-
-        .button-secondary {
-            background: #ffffff;
-            color: #0f172a;
-            border: 1px solid #cbd5e1;
-        }
-
-        .button-secondary:hover {
-            color: #2563eb;
-        }
-
-        .profile-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 20px;
-            padding: 35px;
-            text-align: center;
-        }
-
-        .profile-icon {
-            width: 160px;
-            height: 160px;
-            margin: auto;
-            border-radius: 50%;
-            background: #eff6ff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 70px;
-        }
-
-        .profile-card h2 {
-            color: #0f172a;
-            margin-top: 18px;
-        }
-
-        .profile-card p {
-            color: #64748b;
-            margin-top: 5px;
-        }
-
-
-        /* =========================
-           SECTIONS
-        ========================= */
-
-        section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .section-title .icon {
-            display: block;
-            font-size: 30px;
-            margin-bottom: 5px;
-        }
-
-        .section-title h2 {
-            display: inline-block;
-            color: #2563eb;
-            font-size: 34px;
-        }
-
-        .section-title h2::after {
-            content: "";
-            display: block;
-            width: 55px;
-            height: 3px;
-            background: #2563eb;
-            margin: 8px auto 0;
-        }
-
-        .section-title p {
-            color: #64748b;
-            margin-top: 10px;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about-box {
-            max-width: 900px;
-            margin: auto;
-            padding: 32px;
-            background: #f1f5f9;
-            border: 1px solid #e2e8f0;
-            border-radius: 18px;
-        }
-
-        .about-box p {
-            margin-bottom: 15px;
-        }
-
-        .about-box p:last-child {
-            margin-bottom: 0;
-        }
-
-
-        /* =========================
-           EDUCATION
-        ========================= */
-
-        .education-card {
-            max-width: 900px;
-            margin: auto;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 18px;
-            padding: 30px;
-        }
-
-        .education-year {
-            color: #2563eb;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .education-card h3 {
-            color: #0f172a;
-            font-size: 22px;
-            margin-bottom: 8px;
-        }
-
-        .education-card p {
-            color: #64748b;
-            margin-bottom: 4px;
-        }
-
-
-        /* =========================
-           HOBBIES
-        ========================= */
-
-        .hobbies-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 15px;
-        }
-
-        .hobby-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 25px 12px;
-            text-align: center;
-        }
-
-        .hobby-card .emoji {
-            font-size: 38px;
-            margin-bottom: 8px;
-        }
-
-        .hobby-card h3 {
-            color: #0f172a;
-            font-size: 15px;
-        }
-
-
-        /* =========================
-           SKILLS
-        ========================= */
-
-        .skills-section {
-            background: #f8fafc;
-        }
-
-        .skills-grid {
-            max-width: 950px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-        }
-
-        .skill-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 22px;
-        }
-
-        .skill-card h3 {
-            color: #0f172a;
-            margin-bottom: 7px;
-        }
-
-        .skill-card p {
-            color: #64748b;
-            font-size: 14px;
-        }
-
-        .skill-levels {
-            max-width: 950px;
-            margin: 35px auto 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-        }
-
-        .skill-level {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 20px;
-        }
-
-        .skill-top {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-        }
-
-        .skill-name {
-            color: #0f172a;
-            font-weight: bold;
-        }
-
-        .skill-percent {
-            color: #2563eb;
-            font-weight: bold;
-        }
-
-        .skill-bar {
-            width: 100%;
-            height: 10px;
-            background: #e2e8f0;
-            border-radius: 20px;
-        }
-
-        .skill-fill {
-            height: 100%;
-            background: #2563eb;
-            border-radius: 20px;
-        }
-
-
-        /* =========================
-           PROJECTS
-        ========================= */
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .project-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 18px;
-            padding: 30px;
-        }
-
-        .project-icon {
-            font-size: 45px;
-            margin-bottom: 10px;
-        }
-
-        .project-card h3 {
-            color: #0f172a;
-            font-size: 21px;
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            color: #64748b;
-            margin-bottom: 17px;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 7px;
-            margin-bottom: 18px;
-        }
-
-        .tag {
-            background: #eff6ff;
-            color: #475569;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: bold;
-        }
-
-        .project-link {
-            color: #1d4ed8;
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           LEARNING JOURNEY
-        ========================= */
-
-        .learning-section {
-            background: #f8fafc;
-        }
-
-        .learning-grid {
-            max-width: 950px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-        }
-
-        .learning-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 25px;
-            text-align: center;
-        }
-
-        .learning-card .icon {
-            font-size: 40px;
-            margin-bottom: 8px;
-        }
-
-        .learning-card h3 {
-            color: #0f172a;
-            margin-bottom: 6px;
-        }
-
-        .learning-card p {
-            color: #64748b;
-            font-size: 14px;
-        }
-
-
-        /* =========================
-           VERIFY HERE
-        ========================= */
-
-        .verify-grid {
-            max-width: 850px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-        }
-
-        .verify-card {
-            background: #f1f5f9;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 25px;
-            text-align: center;
-        }
-
-        .verify-card .icon {
-            font-size: 38px;
-        }
-
-        .verify-card h3 {
-            color: #0f172a;
-            margin: 8px 0;
-        }
-
-        .verify-card p {
-            color: #64748b;
-            font-size: 14px;
-        }
-
-
-        /* =========================
-           ACHIEVEMENTS
-        ========================= */
-
-        .achievements-grid {
-            max-width: 900px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-        }
-
-        .achievement-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 24px;
-        }
-
-        .achievement-card h3 {
-            color: #0f172a;
-            margin-bottom: 7px;
-        }
-
-        .achievement-card p {
-            color: #64748b;
-        }
-
-
-        /* =========================
-           LANGUAGES
-        ========================= */
-
-        .languages-grid {
-            max-width: 800px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .language-card {
-            background: #f1f5f9;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 25px;
-            text-align: center;
-        }
-
-        .language-card .icon {
-            font-size: 35px;
-        }
-
-        .language-card h3 {
-            color: #0f172a;
-            margin-top: 7px;
-        }
-
-
-        /* =========================
-           PROFESSIONAL LINKS
-        ========================= */
-
-        .professional-links {
-            max-width: 900px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-        }
-
-        .professional-link {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 21px;
-        }
-
-        .professional-link .icon {
-            font-size: 30px;
-        }
-
-        .professional-link h3 {
-            color: #0f172a;
-            font-size: 17px;
-        }
-
-        .professional-link p {
-            color: #64748b;
-            font-size: 13px;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact-section {
-            background: #f8fafc;
-        }
-
-        .contact-box {
-            max-width: 900px;
-            margin: auto;
-            background: #0f172a;
-            color: #ffffff;
-            border-radius: 22px;
-            padding: 40px;
-        }
-
-        .contact-box .section-title h2 {
-            color: #ffffff;
-        }
-
-        .contact-box .section-title h2::after {
-            background: #ffffff;
-        }
-
-        .contact-box .section-title p {
-            color: #94a3b8;
-        }
-
-        .email {
-            display: block;
-            text-align: center;
-            color: #93c5fd;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 25px;
-        }
-
-        .contact-form {
-            max-width: 700px;
-            margin: auto;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 14px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            border: none;
-            outline: none;
-            border-radius: 10px;
-            padding: 14px;
-            margin-bottom: 14px;
-            font-size: 14px;
-        }
-
-        .contact-form textarea {
-            min-height: 140px;
-            resize: vertical;
-        }
-
-        .submit-button {
-            display: block;
-            margin: auto;
-            border: none;
-            background: #2563eb;
-            color: #ffffff;
-            padding: 13px 24px;
-            border-radius: 10px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .submit-button:hover {
-            background: #1d4ed8;
-        }
-
-        .contact-note {
-            text-align: center;
-            color: #94a3b8;
-            font-size: 12px;
-            margin-top: 10px;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #f8fafc;
-            border-top: 1px solid #e2e8f0;
-            color: #64748b;
-            text-align: center;
-            padding: 28px;
-            font-size: 13px;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            .hero-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .profile-card {
-                max-width: 500px;
-                margin: auto;
-            }
-
-            .hobbies-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-        }
-
-
-        @media (max-width: 700px) {
-
-            .nav-container {
-                flex-direction: column;
-                padding: 12px 0;
-            }
-
-            .nav-links {
-                justify-content: center;
-                gap: 12px;
-            }
-
-            .nav-links a {
-                font-size: 12px;
-            }
-
-            .hero {
-                padding: 70px 0;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .skills-grid,
-            .skill-levels,
-            .projects-grid,
-            .learning-grid,
-            .verify-grid,
-            .achievements-grid,
-            .professional-links {
-                grid-template-columns: 1fr;
-            }
-
-            .languages-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hobbies-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-box {
-                padding: 30px 18px;
-            }
-
-        }
-
-
-        @media (max-width: 450px) {
-
-            .hobbies-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-        }
-/* Name animation */
-.hero h1 span {
-    display: inline-block;
-    animation: nameGlow 2s ease-in-out infinite alternate;
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mustafa Ahmed | IT Support Portfolio</title>
+
+<meta
+name="description"
+content="Mustafa Ahmed - BCA Graduate | IT Support | Technical Support | IT Operations"
+>
+
+<style>
+
+:root{
+--blue:#2563eb;
+--blue-dark:#1d4ed8;
+--dark:#0f172a;
+--text:#334155;
+--muted:#64748b;
+--light:#f8fafc;
+--card:#ffffff;
+--border:#dbe4ef;
+--soft:#eff6ff;
 }
 
-@keyframes nameGlow {
-    from {
-        transform: scale(1);
-        text-shadow: 0 0 0 rgba(37, 99, 235, 0);
-    }
-
-    to {
-        transform: scale(1.04);
-        text-shadow: 0 0 14px rgba(37, 99, 235, 0.35);
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-    </style>
+html{
+scroll-behavior:smooth;
+scroll-padding-top:78px;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+color:var(--text);
+background:#ffffff;
+line-height:1.65;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:min(1120px,92%);
+margin:auto;
+}
+
+section{
+padding:82px 0;
+}
+
+
+/* NAVIGATION */
+
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(8px);
+border-bottom:1px solid var(--border);
+}
+
+.nav-inner{
+min-height:70px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+.logo{
+font-size:24px;
+font-weight:800;
+color:var(--dark);
+}
+
+.logo span{
+color:var(--blue);
+}
+
+.nav-links{
+list-style:none;
+display:flex;
+flex-wrap:wrap;
+gap:18px;
+}
+
+.nav-links a{
+font-size:14px;
+font-weight:700;
+color:var(--text);
+}
+
+.nav-links a:hover{
+color:var(--blue);
+}
+
+
+/* FLOATING CONTACT */
+
+.float-btn{
+position:fixed;
+right:20px;
+top:98px;
+z-index:999;
+width:55px;
+height:55px;
+border-radius:50%;
+display:grid;
+place-items:center;
+background:var(--blue);
+color:#ffffff;
+font-size:22px;
+box-shadow:0 10px 28px rgba(37,99,235,.25);
+}
+
+
+/* HERO */
+
+.hero{
+min-height:88vh;
+display:flex;
+align-items:center;
+background:linear-gradient(180deg,#ffffff,#f8fafc);
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:55px;
+align-items:center;
+}
+
+.badge{
+display:inline-block;
+padding:7px 14px;
+border-radius:30px;
+background:var(--soft);
+color:var(--blue-dark);
+font-size:13px;
+font-weight:800;
+margin-bottom:18px;
+}
+
+.hero h1{
+color:var(--dark);
+font-size:clamp(42px,6vw,70px);
+line-height:1.08;
+margin-bottom:14px;
+}
+
+.hero h1 span{
+color:var(--blue);
+}
+
+.subtitle{
+font-size:25px;
+font-weight:800;
+color:var(--text);
+margin-bottom:12px;
+}
+
+.hero-copy{
+font-size:17px;
+color:var(--muted);
+max-width:720px;
+margin-bottom:10px;
+}
+
+
+/* NAME ANIMATION */
+
+.animated-name{
+display:inline-block;
+color:var(--blue);
+animation:namePulse 2.2s ease-in-out infinite;
+}
+
+@keyframes namePulse{
+
+0%,100%{
+transform:scale(1);
+text-shadow:none;
+}
+
+50%{
+transform:scale(1.045);
+text-shadow:0 0 18px rgba(37,99,235,.25);
+}
+
+}
+
+
+.buttons{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:24px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 20px;
+border-radius:10px;
+font-size:14px;
+font-weight:800;
+}
+
+.btn-primary{
+background:var(--blue);
+color:#ffffff;
+}
+
+.btn-primary:hover{
+background:var(--blue-dark);
+}
+
+.btn-outline{
+background:#ffffff;
+border:1px solid var(--border);
+color:var(--dark);
+}
+
+.btn-outline:hover{
+color:var(--blue);
+}
+
+.profile{
+background:#ffffff;
+border:1px solid var(--border);
+border-radius:24px;
+padding:34px;
+text-align:center;
+box-shadow:0 15px 40px rgba(15,23,42,.06);
+}
+
+.avatar{
+width:170px;
+height:170px;
+margin:auto;
+border-radius:50%;
+display:grid;
+place-items:center;
+background:var(--soft);
+font-size:72px;
+}
+
+.profile h2{
+color:var(--dark);
+margin-top:18px;
+}
+
+.profile p{
+color:var(--muted);
+margin-top:5px;
+}
+
+
+/* SECTION HEADINGS */
+
+.section-head{
+text-align:center;
+margin-bottom:42px;
+}
+
+.section-head .icon{
+display:block;
+font-size:30px;
+margin-bottom:4px;
+}
+
+.section-head h2{
+display:inline-block;
+color:var(--blue);
+font-size:35px;
+}
+
+.section-head h2::after{
+content:"";
+display:block;
+width:55px;
+height:3px;
+background:var(--blue);
+margin:8px auto 0;
+border-radius:10px;
+}
+
+.section-head p{
+color:var(--muted);
+margin-top:10px;
+}
+
+
+/* ABOUT */
+
+.about-box{
+max-width:900px;
+margin:auto;
+padding:32px;
+background:#f1f5f9;
+border:1px solid var(--border);
+border-radius:18px;
+}
+
+.about-box p{
+margin-bottom:14px;
+}
+
+.about-box p:last-child{
+margin-bottom:0;
+}
+
+
+/* EDUCATION */
+
+.education-card{
+max-width:900px;
+margin:auto;
+background:#ffffff;
+border:1px solid var(--border);
+border-radius:18px;
+padding:30px;
+}
+
+.education-year{
+font-weight:800;
+color:var(--blue);
+margin-bottom:5px;
+}
+
+.education-card h3{
+color:var(--dark);
+font-size:22px;
+margin-bottom:8px;
+}
+
+.education-card p{
+color:var(--muted);
+margin-bottom:4px;
+}
+
+
+/* HOBBIES */
+
+.hobbies{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:15px;
+}
+
+.hobby{
+background:#ffffff;
+border:1px solid var(--border);
+border-radius:16px;
+padding:24px 12px;
+text-align:center;
+}
+
+.hobby .emoji{
+font-size:38px;
+margin-bottom:8px;
+}
+
+.hobby h3{
+font-size:15px;
+color:var(--dark);
+}
+
+
+/* SKILLS */
+
+.skills-section{
+background:var(--light);
+}
+
+.skill-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+max-width:950px;
+margin:auto;
+}
+
+.skill-card{
+background:#ffffff;
+border:1px solid var(--border);
+border-radius:16px;
+padding:22px;
+}
+
+.skill-card h3{
+color:var(--dark);
+margin-bottom:7px;
+}
+
+.skill-card p{
+font-size:14px;
+color:var(--muted);
+}
+
+.skill-levels{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+max-width:950px;
+margin:32px auto 0;
+}
+
+.level{
+background:#ffffff;
+border:1px solid var(--border);
+border-radius:16px;
+padding:20px;
+}
+
+.level-top{
+display:flex;
+justify-content:space-between;
+gap:10px;
+margin-bottom:8px;
+}
+
+.level-name{
+font-weight:800;
+color:var(--dark);
+}
+
+.level-pct{
+font-weight:800;
+color:var(--blue);
+}
+
+.track{
+height:10px;
+background:#e2e8f0;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+background:var(--blue);
+border-radius:20px;
+}
+
+
+/* 3D SKILL CUBE */
+
+.cube-section{
+background:#ffffff;
+}
+
+.cube-wrap{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:430px;
+perspective:1000px;
+}
+
+.cube{
+position:relative;
+width:230px;
+height:230px;
+transform-style:preserve-3d;
+animation:rotateCube 14s linear infinite;
+}
+
+.face{
+position:absolute;
+inset:0;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:22px;
+
+background:linear-gradient(145deg,#ffffff,#eff6ff);
+border:2px solid #bfdbfe;
+border-radius:18px;
+
+box-shadow:
+0 14px 32px rgba(15,23,42,.1);
+
+backface-visibility:hidden;
+}
+
+.face .big{
+font-size:54px;
+margin-bottom:8px;
+}
+
+.face h3{
+color:var(--dark);
+margin-bottom:5px;
+}
+
+.face p{
+font-size:12px;
+color:var(--muted);
+}
+
+.f1{
+transform:translateZ(115px);
+}
+
+.f2{
+transform:rotateY(90deg) translateZ(115px);
+}
+
+.f3{
+transform:rotateY(180deg) translateZ(115px);
+}
+
+.f4{
+transform:rotateY(-90deg) translateZ(115px);
+}
+
+.f5{
+transform:rotateX(90deg) translateZ(115px);
+}
+
+.f6{
+transform:rotateX(-90deg) translateZ(115px);
+}
+
+@keyframes rotateCube{
+
+0%{
+transform:rotateX(-8deg) rotateY(0deg);
+}
+
+25%{
+transform:rotateX(8deg) rotateY(90deg);
+}
+
+50%{
+transform:rotateX(-8deg) rotateY(180deg);
+}
+
+75%{
+transform:rotateX(8deg) rotateY(270deg);
+}
+
+100%{
+transform:rotateX(-8deg) rotateY(360deg);
+}
+
+}
+
+.cube-note{
+text-align:center;
+color:var(--muted);
+font-size:13px;
+margin-top:-12px;
+}
+
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:24px;
+}
+
+.project{
+background:#ffffff;
+border:1px solid var(--border);
+border-radius:18px;
+padding:30px;
+}
+
+.project-icon{
+font-size:45px;
+margin-bottom:8px;
+}
+
+.project h3{
+color:var(--dark);
+font-size:21px;
+margin-bottom:9px;
+}
+
+.project p{
+color:var(--muted);
+margin-bottom:16px;
+}
+
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:7px;
+margin-bottom:18px;
+}
+
+.tag{
+background:var(--soft);
+color:#475569;
+padding:5px 10px;
+border-radius:20px;
+font-size:11px;
+font-weight:800;
+}
+
+.project-link{
+color:var(--blue-dark);
+font-weight:800;
+}
+
+
+/* LEARNING */
+
+.learning-section{
+background:var(--light);
+}
+
+.learning-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.learning-card{
+background:#ffffff;
+border:1px solid var(--border);
+border-radius:16px;
+padding:24px;
+text-align:center;
+}
+
+.learning-card .icon{
+font-size:40px;
+margin-bottom:8px;
+}
+
+.learning-card h3{
+color:var(--dark);
+margin-bottom:6px;
+}
+
+.learning-card p{
+color:var(--muted);
+font-size:14px;
+}
+
+
+/* SECOND 3D CUBE */
+
+.cert-cube-wrap{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:390px;
+perspective:1000px;
+}
+
+.cert-cube{
+position:relative;
+width:210px;
+height:210px;
+transform-style:preserve-3d;
+animation:rotateCert 16s linear infinite;
+}
+
+.cert-face{
+position:absolute;
+inset:0;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+background:#ffffff;
+border:2px solid #cbd5e1;
+border-radius:18px;
+padding:18px;
+
+box-shadow:
+0 12px 28px rgba(15,23,42,.1);
+
+backface-visibility:hidden;
+}
+
+.cert-face .big{
+font-size:46px;
+margin-bottom:7px;
+}
+
+.cert-face h3{
+color:var(--dark);
+margin-bottom:5px;
+}
+
+.cert-face p{
+font-size:12px;
+color:var(--muted);
+}
+
+.c1{
+transform:translateZ(105px);
+}
+
+.c2{
+transform:rotateY(90deg) translateZ(105px);
+}
+
+.c3{
+transform:rotateY(180deg) translateZ(105px);
+}
+
+.c4{
+transform:rotateY(-90deg) translateZ(105px);
+}
+
+.c5{
+transform:rotateX(90deg) translateZ(105px);
+}
+
+.c6{
+transform:rotateX(-90deg) translateZ(105px);
+}
+
+@keyframes rotateCert{
+
+0%{
+transform:rotateY(0deg) rotateX(0deg);
+}
+
+25%{
+transform:rotateY(90deg) rotateX(7deg);
+}
+
+50%{
+transform:rotateY(180deg) rotateX(0deg);
+}
+
+75%{
+transform:rotateY(270deg) rotateX(-7deg);
+}
+
+100%{
+transform:rotateY(360deg) rotateX(0deg);
+}
+
+}
+
+
+/* VERIFY */
+
+.verify{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+max-width:850px;
+margin:auto;
+}
+
+.verify-card{
+background:#f1f5f9;
+border:1px solid var(--border);
+border-radius:16px;
+padding:24px;
+text-align:center;
+}
+
+.verify-card .icon{
+font-size:38px;
+}
+
+.verify-card h3{
+color:var(--dark);
+margin:7px 0;
+}
+
+.verify-card p{
+color:var(--muted);
+font-size:14px;
+}
+
+
+/* ACHIEVEMENTS */
+
+.achievements{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+max-width:900px;
+margin:auto;
+}
+
+.achievement{
+background:#ffffff;
+border:1px solid var(--border);
+border-radius:16px;
+padding:24px;
+}
+
+.achievement h3{
+color:var(--dark);
+margin-bottom:6px;
+}
+
+.achievement p{
+color:var(--muted);
+}
+
+
+/* LANGUAGES */
+
+.languages{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+max-width:800px;
+margin:auto;
+}
+
+.language{
+background:#f1f5f9;
+border:1px solid var(--border);
+border-radius:16px;
+padding:24px;
+text-align:center;
+}
+
+.language .icon{
+font-size:34px;
+}
+
+.language h3{
+color:var(--dark);
+margin-top:7px;
+}
+
+
+/* PROFESSIONAL LINKS */
+
+.links{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+max-width:900px;
+margin:auto;
+}
+
+.link{
+display:flex;
+align-items:center;
+gap:15px;
+
+background:#ffffff;
+border:1px solid var(--border);
+border-radius:16px;
+padding:20px;
+}
+
+.link .icon{
+font-size:30px;
+}
+
+.link h3{
+color:var(--dark);
+font-size:17px;
+}
+
+.link p{
+color:var(--muted);
+font-size:13px;
+}
+
+
+/* CONTACT */
+
+.contact-section{
+background:var(--light);
+}
+
+.contact-box{
+max-width:900px;
+margin:auto;
+background:var(--dark);
+border-radius:22px;
+padding:40px;
+color:#ffffff;
+}
+
+.contact-box .section-head h2{
+color:#ffffff;
+}
+
+.contact-box .section-head h2::after{
+background:#ffffff;
+}
+
+.contact-box .section-head p{
+color:#94a3b8;
+}
+
+.email{
+display:block;
+text-align:center;
+color:#93c5fd;
+font-weight:800;
+font-size:18px;
+margin-bottom:24px;
+}
+
+.form{
+max-width:700px;
+margin:auto;
+}
+
+.form-row{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+}
+
+.form input,
+.form textarea{
+width:100%;
+border:0;
+outline:0;
+border-radius:10px;
+padding:14px;
+margin-bottom:14px;
+font-size:14px;
+}
+
+.form textarea{
+min-height:140px;
+resize:vertical;
+}
+
+.submit{
+display:block;
+margin:auto;
+border:0;
+background:var(--blue);
+color:#ffffff;
+padding:13px 24px;
+border-radius:10px;
+font-weight:800;
+cursor:pointer;
+}
+
+.submit:hover{
+background:var(--blue-dark);
+}
+
+.note{
+text-align:center;
+color:#94a3b8;
+font-size:12px;
+margin-top:10px;
+}
+
+
+/* FOOTER */
+
+footer{
+padding:28px;
+background:var(--light);
+border-top:1px solid var(--border);
+text-align:center;
+color:var(--muted);
+font-size:13px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero-grid{
+grid-template-columns:1fr;
+}
+
+.profile{
+max-width:500px;
+margin:auto;
+}
+
+.hobbies{
+grid-template-columns:repeat(3,1fr);
+}
+
+.learning-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+
+@media(max-width:700px){
+
+.nav-inner{
+flex-direction:column;
+padding:12px 0;
+}
+
+.nav-links{
+justify-content:center;
+gap:11px;
+}
+
+.nav-links a{
+font-size:12px;
+}
+
+.float-btn{
+right:14px;
+}
+
+.skill-grid,
+.skill-levels,
+.projects,
+.verify,
+.achievements,
+.links{
+grid-template-columns:1fr;
+}
+
+.languages{
+grid-template-columns:1fr;
+}
+
+.learning-grid{
+grid-template-columns:1fr;
+}
+
+.hobbies{
+grid-template-columns:repeat(2,1fr);
+}
+
+.form-row{
+grid-template-columns:1fr;
+}
+
+.contact-box{
+padding:30px 18px;
+}
+
+}
+
+
+@media(max-width:460px){
+
+.hobbies{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.cube{
+width:200px;
+height:200px;
+}
+
+.face{
+width:200px;
+height:200px;
+}
+
+.f1{
+transform:translateZ(100px);
+}
+
+.f2{
+transform:rotateY(90deg) translateZ(100px);
+}
+
+.f3{
+transform:rotateY(180deg) translateZ(100px);
+}
+
+.f4{
+transform:rotateY(-90deg) translateZ(100px);
+}
+
+.f5{
+transform:rotateX(90deg) translateZ(100px);
+}
+
+.f6{
+transform:rotateX(-90deg) translateZ(100px);
+}
+
+}
+
+</style>
 
 </head>
 
@@ -850,1360 +1114,1621 @@
 <body>
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
-    <div class="container nav-container">
+<div class="container nav-inner">
 
-        <a href="#home" class="logo">
-            Mustafa<span>.</span>
-        </a>
+<a href="#home" class="logo">
+Mustafa<span>.</span>
+</a>
 
-        <ul class="nav-links">
+<ul class="nav-links">
 
-            <li>
-                <a href="#about">👤 About</a>
-            </li>
+<li>
+<a href="#about">👤 About</a>
+</li>
 
-            <li>
-                <a href="#education">🎓 Education</a>
-            </li>
+<li>
+<a href="#education">🎓 Education</a>
+</li>
 
-            <li>
-                <a href="#skills">🛠️ Skills</a>
-            </li>
+<li>
+<a href="#skills">🛠️ Skills</a>
+</li>
 
-            <li>
-                <a href="#projects">💻 Projects</a>
-            </li>
+<li>
+<a href="#projects">💻 Projects</a>
+</li>
 
-            <li>
-                <a href="#hobbies">🎯 Hobbies</a>
-            </li>
+<li>
+<a href="#hobbies">🎯 Hobbies</a>
+</li>
 
-            <li>
-                <a href="#contact">📩 Contact</a>
-            </li>
+<li>
+<a href="#contact">📩 Contact</a>
+</li>
 
-        </ul>
+</ul>
 
-    </div>
+</div>
 
 </nav>
 
 
-<!-- =========================
-     HOME
-========================= -->
+<!-- FLOATING CONTACT -->
 
-<section class="hero" id="home">
-
-    <div class="container hero-grid">
-
-
-        <div>
-
-            <div class="hero-label">
-                🚀 IT Support Portfolio
-            </div>
+<a
+href="mailto:kaalesha77@gmail.com"
+class="float-btn"
+title="Contact"
+>
+✉️
+</a>
 
 
-            <h1>
-                Hi, This is
-                <span>Mustafa Ahmed!</span>
-                👋
-            </h1>
+<!-- HOME -->
+
+<section
+class="hero"
+id="home"
+>
+
+<div class="container hero-grid">
 
 
-            <div class="hero-subtitle">
-                🎓 Kakatiya University
-            </div>
+<div>
+
+<div class="badge">
+🚀 IT Support Portfolio
+</div>
 
 
-            <p class="hero-text">
-                🛠️ IT Support Enthusiast |
-                💻 Technical Support Enthusiast |
-                ⚙️ IT Operations Enthusiast
-            </p>
+<h1>
+
+Hi, This is
+
+<span class="animated-name">
+Mustafa Ahmed!
+</span>
+
+👋
+
+</h1>
 
 
-            <p class="hero-text">
-                🎯 A recent graduate interested in IT Support,
-                Technical Support and IT Operations, with a focus
-                on troubleshooting, problem solving and continuous
-                technology learning.
-            </p>
+<div class="subtitle">
+🎓 Kakatiya University
+</div>
 
 
-            <div class="hero-buttons">
+<p class="hero-copy">
 
-                <a
-                    href="https://www.linkedin.com/in/mustafa-ahmed-1035a024a/"
-                    target="_blank"
-                    class="button button-primary"
-                >
-                    🔗 LinkedIn
-                </a>
+🛠️ IT Support Enthusiast |
+💻 Technical Support Enthusiast |
+⚙️ IT Operations Enthusiast
+
+</p>
 
 
-                <a
-                    href="https://github.com/shaikmustafaahmed"
-                    target="_blank"
-                    class="button button-secondary"
-                >
-                    💻 GitHub
-                </a>
+<p class="hero-copy">
 
-            </div>
+🎯 A recent graduate interested in IT Support,
+Technical Support and IT Operations, with a focus
+on troubleshooting, problem solving and continuous
+technology learning.
 
-        </div>
+</p>
 
 
-        <div class="profile-card">
+<div class="buttons">
 
-            <div class="profile-icon">
-                👨🏻‍💻
-            </div>
+<a
+href="https://www.linkedin.com/in/mustafa-ahmed-1035a024a/"
+target="_blank"
+class="btn btn-primary"
+>
+🔗 LinkedIn
+</a>
 
-            <h2>
-                Mustafa Ahmed
-            </h2>
 
-            <p>
-                🛠️ IT Support
-            </p>
+<a
+href="https://github.com/shaikmustafaahmed"
+target="_blank"
+class="btn btn-outline"
+>
+💻 GitHub
+</a>
 
-            <p>
-                💻 Technical Support
-            </p>
+</div>
 
-            <p>
-                ⚙️ IT Operations
-            </p>
+</div>
 
-        </div>
 
-    </div>
+<div class="profile">
+
+<div class="avatar">
+👨🏻‍💻
+</div>
+
+<h2>
+Mustafa Ahmed
+</h2>
+
+<p>
+🛠️ IT Support
+</p>
+
+<p>
+💻 Technical Support
+</p>
+
+<p>
+⚙️ IT Operations
+</p>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ABOUT -->
 
 <section id="about">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-head">
 
-            <span class="icon">
-                👤
-            </span>
+<span class="icon">
+👤
+</span>
 
-            <h2>
-                About Me
-            </h2>
+<h2>
+About Me
+</h2>
 
-            <p>
-                🌟 A quick introduction about me.
-            </p>
+<p>
+🌟 A quick introduction about me.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="about-box">
+<div class="about-box">
 
-            <p>
-                👋 I am Mustafa Ahmed, a recent graduate
-                from Kavitha Memorial Degree College
-                under Kakatiya University.
-            </p>
+<p>
+👋 I am Mustafa Ahmed, a recent graduate from
+Kavitha Memorial Degree College under Kakatiya University.
+</p>
 
-            <p>
-                🛠️ I am interested in building my career
-                in IT Support, Technical Support, Desktop Support
-                and IT Operations.
-            </p>
+<p>
+🛠️ I am interested in building my career in IT Support,
+Technical Support, Desktop Support and IT Operations.
+</p>
 
-            <p>
-                🧩 I enjoy troubleshooting technical issues,
-                understanding systems, solving problems and
-                improving my technology knowledge.
-            </p>
+<p>
+🧩 I enjoy troubleshooting technical issues,
+understanding systems, solving problems and improving
+my technology knowledge.
+</p>
 
-            <p>
-                🚀 My goal is to begin my professional journey
-                in a practical IT environment where I can learn,
-                contribute and grow.
-            </p>
+<p>
+🚀 My goal is to begin my professional journey in a
+practical IT environment where I can learn,
+contribute and grow.
+</p>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     EDUCATION
-========================= -->
+<!-- EDUCATION -->
 
 <section id="education">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-head">
 
-            <span class="icon">
-                🎓
-            </span>
+<span class="icon">
+🎓
+</span>
 
-            <h2>
-                Education
-            </h2>
+<h2>
+Education
+</h2>
 
-            <p>
-                📚 My academic background.
-            </p>
+<p>
+📚 My academic background.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="education-card">
+<div class="education-card">
 
-            <div class="education-year">
-                📅 2023 – 2026
-            </div>
+<div class="education-year">
+📅 2023 – 2026
+</div>
 
-            <h3>
-                🎓 Bachelor of Computer Applications
-            </h3>
+<h3>
+🎓 Bachelor of Computer Applications
+</h3>
 
-            <p>
-                Kavitha Memorial Degree College
-            </p>
+<p>
+Kavitha Memorial Degree College
+</p>
 
-            <p>
-                Kakatiya University
-            </p>
+<p>
+Kakatiya University
+</p>
 
-            <p>
-                ✅ Graduation completed in 2026.
-            </p>
+<p>
+✅ Graduation completed in 2026.
+</p>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     HOBBIES
-========================= -->
+<!-- HOBBIES -->
 
 <section id="hobbies">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-head">
 
-            <span class="icon">
-                🎯
-            </span>
+<span class="icon">
+🎯
+</span>
 
-            <h2>
-                Hobbies
-            </h2>
+<h2>
+Hobbies
+</h2>
 
-            <p>
-                🌟 Things I enjoy in my free time.
-            </p>
+<p>
+🌟 Things I enjoy in my free time.
+</p>
 
-        </div>
-
-
-        <div class="hobbies-grid">
+</div>
 
 
-            <div class="hobby-card">
+<div class="hobbies">
 
-                <div class="emoji">
-                    🎵
-                </div>
+<div class="hobby">
+<div class="emoji">🎵</div>
+<h3>Listening to Music</h3>
+</div>
 
-                <h3>
-                    Listening to Music
-                </h3>
+<div class="hobby">
+<div class="emoji">🌐</div>
+<h3>Browsing the Internet</h3>
+</div>
 
-            </div>
+<div class="hobby">
+<div class="emoji">🏀</div>
+<h3>Playing Basketball</h3>
+</div>
 
+<div class="hobby">
+<div class="emoji">📚</div>
+<h3>Learning New Things</h3>
+</div>
 
-            <div class="hobby-card">
+<div class="hobby">
+<div class="emoji">💡</div>
+<h3>Exploring Technology</h3>
+</div>
 
-                <div class="emoji">
-                    🌐
-                </div>
+</div>
 
-                <h3>
-                    Browsing the Internet
-                </h3>
-
-            </div>
-
-
-            <div class="hobby-card">
-
-                <div class="emoji">
-                    🏀
-                </div>
-
-                <h3>
-                    Playing Basketball
-                </h3>
-
-            </div>
-
-
-            <div class="hobby-card">
-
-                <div class="emoji">
-                    📚
-                </div>
-
-                <h3>
-                    Learning New Things
-                </h3>
-
-            </div>
-
-
-            <div class="hobby-card">
-
-                <div class="emoji">
-                    💡
-                </div>
-
-                <h3>
-                    Exploring Technology
-                </h3>
-
-            </div>
-
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     SKILLS
-========================= -->
+<!-- SKILLS -->
 
 <section
-    id="skills"
-    class="skills-section"
+id="skills"
+class="skills-section"
 >
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-head">
 
-            <span class="icon">
-                🛠️
-            </span>
+<span class="icon">
+🛠️
+</span>
 
-            <h2>
-                SkillSet
-            </h2>
+<h2>
+SkillSet
+</h2>
 
-            <p>
-                💡 My current IT support knowledge areas.
-            </p>
+<p>
+💡 My current IT support knowledge areas.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="skills-grid">
+<div class="skill-grid">
 
 
-            <div class="skill-card">
+<div class="skill-card">
 
-                <h3>
-                    💻 Computer Operations
-                </h3>
+<h3>
+💻 Computer Operations
+</h3>
 
-                <p>
-                    Everyday computer operations,
-                    system usage and basic troubleshooting.
-                </p>
+<p>
+Everyday computer operations,
+system usage and basic troubleshooting.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="skill-card">
+<div class="skill-card">
 
-                <h3>
-                    📊 MS Office
-                </h3>
+<h3>
+📊 MS Office
+</h3>
 
-                <p>
-                    Microsoft Word, Excel, PowerPoint
-                    and office productivity tasks.
-                </p>
+<p>
+Microsoft Word, Excel, PowerPoint
+and office productivity tasks.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="skill-card">
+<div class="skill-card">
 
-                <h3>
-                    🌐 Internet & Email
-                </h3>
+<h3>
+🌐 Internet & Email
+</h3>
 
-                <p>
-                    Internet browsing, email handling
-                    and connectivity basics.
-                </p>
+<p>
+Internet browsing, email handling
+and connectivity basics.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="skill-card">
+<div class="skill-card">
 
-                <h3>
-                    🛠️ IT Troubleshooting
-                </h3>
+<h3>
+🛠️ IT Troubleshooting
+</h3>
 
-                <p>
-                    Identifying and resolving
-                    common technical issues.
-                </p>
+<p>
+Identifying and resolving
+common technical issues.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="skill-card">
+<div class="skill-card">
 
-                <h3>
-                    🧩 Problem Solving
-                </h3>
+<h3>
+🧩 Problem Solving
+</h3>
 
-                <p>
-                    Logical thinking and step-by-step
-                    issue resolution.
-                </p>
+<p>
+Logical thinking and step-by-step
+issue resolution.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="skill-card">
+<div class="skill-card">
 
-                <h3>
-                    📝 Documentation
-                </h3>
+<h3>
+📝 Documentation
+</h3>
 
-                <p>
-                    Creating clear notes and
-                    documenting troubleshooting steps.
-                </p>
+<p>
+Creating clear notes and
+documenting troubleshooting steps.
+</p>
 
-            </div>
+</div>
 
 
-        </div>
+</div>
 
 
-        <div class="skill-levels">
+<div class="skill-levels">
 
 
-            <div class="skill-level">
+<div class="level">
 
-                <div class="skill-top">
+<div class="level-top">
 
-                    <span class="skill-name">
-                        💻 Computer Operations
-                    </span>
+<span class="level-name">
+💻 Computer Operations
+</span>
 
-                    <span class="skill-percent">
-                        82%
-                    </span>
+<span class="level-pct">
+82%
+</span>
 
-                </div>
+</div>
 
-                <div class="skill-bar">
-                    <div
-                        class="skill-fill"
-                        style="width:82%;"
-                    ></div>
-                </div>
+<div class="track">
 
-            </div>
+<div
+class="fill"
+style="width:82%"
+></div>
 
+</div>
 
-            <div class="skill-level">
+</div>
 
-                <div class="skill-top">
 
-                    <span class="skill-name">
-                        📊 MS Office
-                    </span>
+<div class="level">
 
-                    <span class="skill-percent">
-                        82%
-                    </span>
+<div class="level-top">
 
-                </div>
+<span class="level-name">
+📊 MS Office
+</span>
 
-                <div class="skill-bar">
-                    <div
-                        class="skill-fill"
-                        style="width:82%;"
-                    ></div>
-                </div>
+<span class="level-pct">
+82%
+</span>
 
-            </div>
+</div>
 
+<div class="track">
 
-            <div class="skill-level">
+<div
+class="fill"
+style="width:82%"
+></div>
 
-                <div class="skill-top">
+</div>
 
-                    <span class="skill-name">
-                        🌐 Internet & Email
-                    </span>
+</div>
 
-                    <span class="skill-percent">
-                        84%
-                    </span>
 
-                </div>
+<div class="level">
 
-                <div class="skill-bar">
-                    <div
-                        class="skill-fill"
-                        style="width:84%;"
-                    ></div>
-                </div>
+<div class="level-top">
 
-            </div>
+<span class="level-name">
+🌐 Internet & Email
+</span>
 
+<span class="level-pct">
+84%
+</span>
 
-            <div class="skill-level">
+</div>
 
-                <div class="skill-top">
+<div class="track">
 
-                    <span class="skill-name">
-                        🛠️ IT Troubleshooting
-                    </span>
+<div
+class="fill"
+style="width:84%"
+></div>
 
-                    <span class="skill-percent">
-                        70%
-                    </span>
+</div>
 
-                </div>
+</div>
 
-                <div class="skill-bar">
-                    <div
-                        class="skill-fill"
-                        style="width:70%;"
-                    ></div>
-                </div>
 
-            </div>
+<div class="level">
 
+<div class="level-top">
 
-            <div class="skill-level">
+<span class="level-name">
+🛠️ IT Troubleshooting
+</span>
 
-                <div class="skill-top">
+<span class="level-pct">
+70%
+</span>
 
-                    <span class="skill-name">
-                        🧩 Problem Solving
-                    </span>
+</div>
 
-                    <span class="skill-percent">
-                        78%
-                    </span>
+<div class="track">
 
-                </div>
+<div
+class="fill"
+style="width:70%"
+></div>
 
-                <div class="skill-bar">
-                    <div
-                        class="skill-fill"
-                        style="width:78%;"
-                    ></div>
-                </div>
+</div>
 
-            </div>
+</div>
 
 
-            <div class="skill-level">
+<div class="level">
 
-                <div class="skill-top">
+<div class="level-top">
 
-                    <span class="skill-name">
-                        📝 Documentation
-                    </span>
+<span class="level-name">
+🧩 Problem Solving
+</span>
 
-                    <span class="skill-percent">
-                        72%
-                    </span>
+<span class="level-pct">
+78%
+</span>
 
-                </div>
+</div>
 
-                <div class="skill-bar">
-                    <div
-                        class="skill-fill"
-                        style="width:72%;"
-                    ></div>
-                </div>
+<div class="track">
 
-            </div>
+<div class="fill"
+style="width:78%"
+></div>
 
+</div>
 
-        </div>
+</div>
 
-    </div>
+
+<div class="level">
+
+<div class="level-top">
+
+<span class="level-name">
+📝 Documentation
+</span>
+
+<span class="level-pct">
+72%
+</span>
+
+</div>
+
+<div class="track">
+
+<div
+class="fill"
+style="width:72%"
+></div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     PROJECTS
-========================= -->
+<!-- 3D SKILL CUBE -->
+
+<section class="cube-section">
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="icon">
+🔄
+</span>
+
+<h2>
+SkillSet 3D
+</h2>
+
+<p>
+🧊 A rotating view of my core skill areas.
+</p>
+
+</div>
+
+
+<div class="cube-wrap">
+
+<div class="cube">
+
+
+<div class="face f1">
+
+<div class="big">
+💻
+</div>
+
+<h3>
+Computer Operations
+</h3>
+
+<p>
+🖥️ Everyday computer use and basic troubleshooting.
+</p>
+
+</div>
+
+
+<div class="face f2">
+
+<div class="big">
+📊
+</div>
+
+<h3>
+MS Office
+</h3>
+
+<p>
+📑 Word, Excel and PowerPoint.
+</p>
+
+</div>
+
+
+<div class="face f3">
+
+<div class="big">
+🌐
+</div>
+
+<h3>
+Internet & Email
+</h3>
+
+<p>
+📧 Browsing, email and connectivity.
+</p>
+
+</div>
+
+
+<div class="face f4">
+
+<div class="big">
+🛠️
+</div>
+
+<h3>
+IT Troubleshooting
+</h3>
+
+<p>
+🔧 Common technical issue resolution.
+</p>
+
+</div>
+
+
+<div class="face f5">
+
+<div class="big">
+🧩
+</div>
+
+<h3>
+Problem Solving
+</h3>
+
+<p>
+💡 Logical and structured thinking.
+</p>
+
+</div>
+
+
+<div class="face f6">
+
+<div class="big">
+☁️
+</div>
+
+<h3>
+Cloud Fundamentals
+</h3>
+
+<p>
+🚀 Basic cloud concepts.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="cube-note">
+🔄 Continuously rotating 3D cube.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
 
 <section id="projects">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-head">
 
-            <span class="icon">
-                💻
-            </span>
+<span class="icon">
+💻
+</span>
 
-            <h2>
-                Projects
-            </h2>
+<h2>
+Projects
+</h2>
 
-            <p>
-                🚀 Academic and practical projects.
-            </p>
+<p>
+🚀 Academic and practical projects.
+</p>
 
-        </div>
-
-
-        <div class="projects-grid">
+</div>
 
 
-            <div class="project-card">
-
-                <div class="project-icon">
-                    💳
-                </div>
-
-                <h3>
-                    Securing Digital Payment Systems in Universities
-                </h3>
-
-                <p>
-                    🔐 An academic project focused on secure digital
-                    payment processing for university fee transactions,
-                    authentication and data protection.
-                </p>
+<div class="projects">
 
 
-                <div class="tags">
+<div class="project">
 
-                    <span class="tag">Java</span>
-                    <span class="tag">JDBC</span>
-                    <span class="tag">MySQL</span>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
+<div class="project-icon">
+💳
+</div>
 
-                </div>
+<h3>
+Securing Digital Payment Systems in Universities
+</h3>
 
-
-                <a
-                    href="https://github.com/shaikmustafaahmed/digital-payment-security"
-                    target="_blank"
-                    class="project-link"
-                >
-                    🔗 View Project on GitHub →
-                </a>
-
-            </div>
+<p>
+🔐 An academic project focused on secure digital payment
+processing for university fee transactions,
+authentication and data protection.
+</p>
 
 
-            <div class="project-card">
+<div class="tags">
 
-                <div class="project-icon">
-                    🛠️
-                </div>
+<span class="tag">Java</span>
+<span class="tag">JDBC</span>
+<span class="tag">MySQL</span>
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
 
-                <h3>
-                    IT Support Troubleshooting Portfolio
-                </h3>
-
-                <p>
-                    🧩 A practical collection of common IT support
-                    troubleshooting scenarios including internet,
-                    password, software and printer issues.
-                </p>
+</div>
 
 
-                <div class="tags">
+<a
+class="project-link"
+href="https://github.com/shaikmustafaahmed/digital-payment-security"
+target="_blank"
+>
+🔗 View Project on GitHub →
+</a>
 
-                    <span class="tag">IT Support</span>
-                    <span class="tag">Troubleshooting</span>
-                    <span class="tag">Technical Support</span>
-                    <span class="tag">Problem Solving</span>
-
-                </div>
-
-
-                <a
-                    href="https://github.com/shaikmustafaahmed/IT-Support-Portfolio"
-                    target="_blank"
-                    class="project-link"
-                >
-                    🔗 View Portfolio on GitHub →
-                </a>
-
-            </div>
+</div>
 
 
-        </div>
+<div class="project">
 
-    </div>
+<div class="project-icon">
+🛠️
+</div>
+
+<h3>
+IT Support Troubleshooting Portfolio
+</h3>
+
+<p>
+🧩 A practical collection of common IT support
+troubleshooting scenarios including internet,
+password, software and printer issues.
+</p>
+
+
+<div class="tags">
+
+<span class="tag">IT Support</span>
+<span class="tag">Troubleshooting</span>
+<span class="tag">Technical Support</span>
+<span class="tag">Problem Solving</span>
+
+</div>
+
+
+<a
+class="project-link"
+href="https://github.com/shaikmustafaahmed/IT-Support-Portfolio"
+target="_blank"
+>
+🔗 View Portfolio on GitHub →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     LEARNING JOURNEY
-========================= -->
+<!-- LEARNING JOURNEY -->
 
 <section class="learning-section">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-head">
 
-            <span class="icon">
-                📚
-            </span>
+<span class="icon">
+📚
+</span>
 
-            <h2>
-                Learning Journey
-            </h2>
+<h2>
+Learning Journey
+</h2>
 
-            <p>
-                🚀 Areas I am currently learning.
-            </p>
+<p>
+🚀 Areas I am currently learning.
+</p>
 
-        </div>
-
-
-        <div class="learning-grid">
+</div>
 
 
-            <div class="learning-card">
-
-                <div class="icon">☁️</div>
-
-                <h3>
-                    Cloud Fundamentals
-                </h3>
-
-                <p>
-                    Basic cloud concepts and services.
-                </p>
-
-            </div>
+<div class="learning-grid">
 
 
-            <div class="learning-card">
+<div class="learning-card">
 
-                <div class="icon">🪟</div>
+<div class="icon">
+☁️
+</div>
 
-                <h3>
-                    Windows Support
-                </h3>
+<h3>
+Cloud Fundamentals
+</h3>
 
-                <p>
-                    Practical Windows troubleshooting knowledge.
-                </p>
+<p>
+Basic cloud concepts and services.
+</p>
 
-            </div>
-
-
-            <div class="learning-card">
-
-                <div class="icon">🌐</div>
-
-                <h3>
-                    Networking Basics
-                </h3>
-
-                <p>
-                    Connectivity and networking fundamentals.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="learning-card">
+<div class="learning-card">
 
-                <div class="icon">🛡️</div>
+<div class="icon">
+🪟
+</div>
 
-                <h3>
-                    IT Security Basics
-                </h3>
+<h3>
+Windows Support
+</h3>
 
-                <p>
-                    Essential security and safe computing practices.
-                </p>
+<p>
+Practical Windows troubleshooting knowledge.
+</p>
 
-            </div>
-
-
-            <div class="learning-card">
-
-                <div class="icon">🔧</div>
-
-                <h3>
-                    Technical Support
-                </h3>
-
-                <p>
-                    Systematic troubleshooting and support skills.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="learning-card">
+<div class="learning-card">
 
-                <div class="icon">🚀</div>
+<div class="icon">
+🌐
+</div>
 
-                <h3>
-                    Continuous Learning
-                </h3>
+<h3>
+Networking Basics
+</h3>
 
-                <p>
-                    Consistently improving technical knowledge.
-                </p>
+<p>
+Connectivity and networking fundamentals.
+</p>
 
-            </div>
-
-
-        </div>
+</div>
 
 
-        <p
-            style="
-                text-align:center;
-                color:#64748b;
-                margin-top:25px;
-                font-size:13px;
-            "
-        >
-            📌 These are learning areas,
-            not completed certifications.
-        </p>
+<div class="learning-card">
 
-    </div>
+<div class="icon">
+🛡️
+</div>
+
+<h3>
+IT Security Basics
+</h3>
+
+<p>
+Essential security and safe computing practices.
+</p>
+
+</div>
+
+
+<div class="learning-card">
+
+<div class="icon">
+🔧
+</div>
+
+<h3>
+Technical Support
+</h3>
+
+<p>
+Systematic troubleshooting and support skills.
+</p>
+
+</div>
+
+
+<div class="learning-card">
+
+<div class="icon">
+🚀
+</div>
+
+<h3>
+Continuous Learning
+</h3>
+
+<p>
+Consistently improving technical knowledge.
+</p>
+
+</div>
+
+
+</div>
+
+
+<p
+style="
+text-align:center;
+color:#64748b;
+margin-top:22px;
+font-size:13px;
+"
+>
+📌 These are learning areas,
+not completed certifications.
+</p>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     VERIFY HERE
-========================= -->
+<!-- SECOND 3D CUBE -->
 
 <section>
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-head">
 
-            <span class="icon">
-                ✅
-            </span>
+<span class="icon">
+🔄
+</span>
 
-            <h2>
-                Verify Here
-            </h2>
+<h2>
+Learning 3D
+</h2>
 
-            <p>
-                🎯 Certification verification links will be added
-                after genuine certifications are completed.
-            </p>
+<p>
+🧊 A rotating view of my current learning areas.
+</p>
 
-        </div>
-
-
-        <div class="verify-grid">
+</div>
 
 
-            <div class="verify-card">
+<div class="cert-cube-wrap">
 
-                <div class="icon">
-                    ☁️
-                </div>
-
-                <h3>
-                    AWS
-                </h3>
-
-                <p>
-                    🔗 Verification link will be added
-                    after genuine completion.
-                </p>
-
-            </div>
+<div class="cert-cube">
 
 
-            <div class="verify-card">
+<div class="cert-face c1">
 
-                <div class="icon">
-                    ☁️
-                </div>
+<div class="big">
+☁️
+</div>
 
-                <h3>
-                    Microsoft Azure
-                </h3>
+<h3>
+Cloud Fundamentals
+</h3>
 
-                <p>
-                    🔗 Verification link will be added
-                    after genuine completion.
-                </p>
+<p>
+Basic cloud concepts.
+</p>
 
-            </div>
+</div>
 
 
-        </div>
+<div class="cert-face c2">
 
-    </div>
+<div class="big">
+🪟
+</div>
+
+<h3>
+Windows Support
+</h3>
+
+<p>
+Windows troubleshooting.
+</p>
+
+</div>
+
+
+<div class="cert-face c3">
+
+<div class="big">
+🌐
+</div>
+
+<h3>
+Networking Basics
+</h3>
+
+<p>
+Connectivity fundamentals.
+</p>
+
+</div>
+
+
+<div class="cert-face c4">
+
+<div class="big">
+🛡️
+</div>
+
+<h3>
+IT Security Basics
+</h3>
+
+<p>
+Essential security practices.
+</p>
+
+</div>
+
+
+<div class="cert-face c5">
+
+<div class="big">
+🔧
+</div>
+
+<h3>
+Technical Support
+</h3>
+
+<p>
+Support and troubleshooting.
+</p>
+
+</div>
+
+
+<div class="cert-face c6">
+
+<div class="big">
+🚀
+</div>
+
+<h3>
+Continuous Learning
+</h3>
+
+<p>
+Ongoing development.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="cube-note">
+📌 Learning areas only — not completed certifications.
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     ACHIEVEMENTS
-========================= -->
+<!-- VERIFY -->
 
 <section>
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-head">
 
-            <span class="icon">
-                🏆
-            </span>
+<span class="icon">
+✅
+</span>
 
-            <h2>
-                Achievements
-            </h2>
+<h2>
+Verify Here
+</h2>
 
-            <p>
-                🌟 Important milestones in my journey.
-            </p>
+<p>
+🎯 Certification verification links will be added
+after genuine completion.
+</p>
 
-        </div>
-
-
-        <div class="achievements-grid">
+</div>
 
 
-            <div class="achievement-card">
-
-                <h3>
-                    🎓 Graduation Completed
-                </h3>
-
-                <p>
-                    Successfully completed graduation in 2026.
-                </p>
-
-            </div>
+<div class="verify">
 
 
-            <div class="achievement-card">
+<div class="verify-card">
 
-                <h3>
-                    💻 Portfolio Development
-                </h3>
+<div class="icon">
+☁️
+</div>
 
-                <p>
-                    Built a personal IT support portfolio
-                    and professional online presence.
-                </p>
+<h3>
+AWS
+</h3>
 
-            </div>
+<p>
+🔗 Verification link will be added after genuine completion.
+</p>
 
-
-            <div class="achievement-card">
-
-                <h3>
-                    🛠️ IT Support Practice
-                </h3>
-
-                <p>
-                    Practised common technical
-                    troubleshooting scenarios.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="achievement-card">
+<div class="verify-card">
 
-                <h3>
-                    🚀 Continuous Learning
-                </h3>
+<div class="icon">
+☁️
+</div>
 
-                <p>
-                    Continuing to develop IT support
-                    and technology knowledge.
-                </p>
+<h3>
+Microsoft Azure
+</h3>
 
-            </div>
+<p>
+🔗 Verification link will be added after genuine completion.
+</p>
+
+</div>
 
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     LANGUAGES
-========================= -->
+<!-- ACHIEVEMENTS -->
 
 <section>
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-head">
 
-            <span class="icon">
-                🗣️
-            </span>
+<span class="icon">
+🏆
+</span>
 
-            <h2>
-                Languages
-            </h2>
+<h2>
+Achievements
+</h2>
 
-            <p>
-                🌍 Languages I can communicate in.
-            </p>
+<p>
+🌟 Important milestones in my journey.
+</p>
 
-        </div>
-
-
-        <div class="languages-grid">
+</div>
 
 
-            <div class="language-card">
-
-                <div class="icon">
-                    🇬🇧
-                </div>
-
-                <h3>
-                    English
-                </h3>
-
-            </div>
+<div class="achievements">
 
 
-            <div class="language-card">
+<div class="achievement">
 
-                <div class="icon">
-                    🇮🇳
-                </div>
+<h3>
+🎓 Graduation Completed
+</h3>
 
-                <h3>
-                    Telugu
-                </h3>
+<p>
+Successfully completed graduation in 2026.
+</p>
 
-            </div>
-
-
-            <div class="language-card">
-
-                <div class="icon">
-                    🗣️
-                </div>
-
-                <h3>
-                    Urdu
-                </h3>
-
-            </div>
+</div>
 
 
-        </div>
+<div class="achievement">
 
-    </div>
+<h3>
+💻 Portfolio Development
+</h3>
+
+<p>
+Built a personal IT support portfolio and
+professional online presence.
+</p>
+
+</div>
+
+
+<div class="achievement">
+
+<h3>
+🛠️ IT Support Practice
+</h3>
+
+<p>
+Practised common technical troubleshooting scenarios.
+</p>
+
+</div>
+
+
+<div class="achievement">
+
+<h3>
+🚀 Continuous Learning
+</h3>
+
+<p>
+Continuing to develop IT support and
+technology knowledge.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     PROFESSIONAL LINKS
-========================= -->
+<!-- LANGUAGES -->
 
 <section>
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-head">
 
-            <span class="icon">
-                🔗
-            </span>
+<span class="icon">
+🗣️
+</span>
 
-            <h2>
-                Professional Links
-            </h2>
+<h2>
+Languages
+</h2>
 
-            <p>
-                🌐 My professional profiles and links.
-            </p>
+<p>
+🌍 Languages I can communicate in.
+</p>
 
-        </div>
-
-
-        <div class="professional-links">
+</div>
 
 
-            <a
-                href="https://www.linkedin.com/in/mustafa-ahmed-1035a024a/"
-                target="_blank"
-                class="professional-link"
-            >
-
-                <div class="icon">
-                    🔵
-                </div>
-
-                <div>
-
-                    <h3>
-                        LinkedIn
-                    </h3>
-
-                    <p>
-                        🌐 Professional profile
-                    </p>
-
-                </div>
-
-            </a>
+<div class="languages">
 
 
-            <a
-                href="https://github.com/shaikmustafaahmed"
-                target="_blank"
-                class="professional-link"
-            >
+<div class="language">
 
-                <div class="icon">
-                    💻
-                </div>
+<div class="icon">
+🇬🇧
+</div>
 
-                <div>
+<h3>
+English
+</h3>
 
-                    <h3>
-                        GitHub
-                    </h3>
-
-                    <p>
-                        🚀 Projects and repositories
-                    </p>
-
-                </div>
-
-            </a>
+</div>
 
 
-            <a
-                href="https://linktr.ee/kaalesha77"
-                target="_blank"
-                class="professional-link"
-            >
+<div class="language">
 
-                <div class="icon">
-                    🔗
-                </div>
+<div class="icon">
+🇮🇳
+</div>
 
-                <div>
+<h3>
+Telugu
+</h3>
 
-                    <h3>
-                        Linktree
-                    </h3>
-
-                    <p>
-                        📌 Professional links
-                    </p>
-
-                </div>
-
-            </a>
+</div>
 
 
-            <a
-                href="mailto:kaalesha77@gmail.com"
-                class="professional-link"
-            >
+<div class="language">
 
-                <div class="icon">
-                    📩
-                </div>
+<div class="icon">
+🗣️
+</div>
 
-                <div>
+<h3>
+Urdu
+</h3>
 
-                    <h3>
-                        Email
-                    </h3>
-
-                    <p>
-                        kaalesha77@gmail.com
-                    </p>
-
-                </div>
-
-            </a>
+</div>
 
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- PROFESSIONAL LINKS -->
 
-<section
-    id="contact"
-    class="contact-section"
+<section>
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="icon">
+🔗
+</span>
+
+<h2>
+Professional Links
+</h2>
+
+<p>
+🌐 My professional profiles and links.
+</p>
+
+</div>
+
+
+<div class="links">
+
+
+<a
+class="link"
+href="https://www.linkedin.com/in/mustafa-ahmed-1035a024a/"
+target="_blank"
 >
 
-    <div class="container">
+<div class="icon">
+🔵
+</div>
 
-        <div class="contact-box">
+<div>
 
+<h3>
+LinkedIn
+</h3>
 
-            <div class="section-title">
+<p>
+🌐 Professional profile
+</p>
 
-                <span class="icon">
-                    📩
-                </span>
+</div>
 
-                <h2>
-                    Contact Me
-                </h2>
-
-                <p>
-                    🤝 Feel free to contact me
-                    for professional opportunities
-                    and networking.
-                </p>
-
-            </div>
+</a>
 
 
-            <a
-                href="mailto:kaalesha77@gmail.com"
-                class="email"
-            >
-                📧 kaalesha77@gmail.com
-            </a>
+<a
+class="link"
+href="https://github.com/shaikmustafaahmed"
+target="_blank"
+>
+
+<div class="icon">
+💻
+</div>
+
+<div>
+
+<h3>
+GitHub
+</h3>
+
+<p>
+🚀 Projects and repositories
+</p>
+
+</div>
+
+</a>
 
 
-            <form
-                action="mailto:kaalesha77@gmail.com"
-                method="post"
-                enctype="text/plain"
-                class="contact-form"
-            >
+<a
+class="link"
+href="https://linktr.ee/kaalesha77"
+target="_blank"
+>
 
-                <div class="form-row">
+<div class="icon">
+🔗
+</div>
 
-                    <input
-                        type="email"
-                        name="Email"
-                        placeholder="📧 Your Email"
-                        required
-                    >
+<div>
 
-                    <input
-                        type="text"
-                        name="Subject"
-                        placeholder="📝 Subject"
-                        required
-                    >
+<h3>
+Linktree
+</h3>
 
-                </div>
+<p>
+📌 Professional links
+</p>
 
+</div>
 
-                <textarea
-                    name="Message"
-                    placeholder="✍️ Write your message here..."
-                    required
-                ></textarea>
+</a>
 
 
-                <button
-                    type="submit"
-                    class="submit-button"
-                >
-                    📩 Send Message
-                </button>
+<a
+class="link"
+href="mailto:kaalesha77@gmail.com"
+>
+
+<div class="icon">
+📩
+</div>
+
+<div>
+
+<h3>
+Email
+</h3>
+
+<p>
+kaalesha77@gmail.com
+</p>
+
+</div>
+
+</a>
 
 
-                <div class="contact-note">
-                    📌 Clicking the button will open
-                    your default email application.
-                </div>
+</div>
 
-            </form>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- CONTACT -->
+
+<section
+id="contact"
+class="contact-section"
+>
+
+<div class="container">
+
+<div class="contact-box">
+
+
+<div class="section-head">
+
+<span class="icon">
+📩
+</span>
+
+<h2>
+Contact Me
+</h2>
+
+<p>
+🤝 Feel free to contact me for professional
+opportunities and networking.
+</p>
+
+</div>
+
+
+<a
+class="email"
+href="mailto:kaalesha77@gmail.com"
+>
+📧 kaalesha77@gmail.com
+</a>
+
+
+<form
+class="form"
+action="mailto:kaalesha77@gmail.com"
+method="post"
+enctype="text/plain"
+>
+
+
+<div class="form-row">
+
+<input
+type="email"
+name="Email"
+placeholder="📧 Your Email"
+required
+>
+
+
+<input
+type="text"
+name="Subject"
+placeholder="📝 Subject"
+required
+>
+
+</div>
+
+
+<textarea
+name="Message"
+placeholder="✍️ Write your message here..."
+required
+></textarea>
+
+
+<button
+class="submit"
+type="submit"
+>
+📩 Send Message
+</button>
+
+
+<div class="note">
+📌 Clicking the button will open
+your default email application.
+</div>
+
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
-    © 2026 Mustafa Ahmed
-    |
-    🛠️ IT Support
-    |
-    💻 Technical Support
-    |
-    ⚙️ IT Operations
+© 2026 Mustafa Ahmed |
+🛠️ IT Support |
+💻 Technical Support |
+⚙️ IT Operations
 
 </footer>
 
